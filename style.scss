@@ -1,6 +1,11 @@
 @mixin flex{
             display: flex;
         flex-direction: column;
+        font-family: helvetica;
+}
+@font-face {
+    font-family: helvetica;
+    src: url(./HelveticaNeueLight.otf);
 }
 *{
     padding: 0;
@@ -19,17 +24,24 @@ main{
     display: flex;
     flex-direction: column;
 
-    .view1{
+    section.view1{
         display: flex;
         flex-direction: column;
         width: 100%;
+        padding: 1rem;
 
         .top{
             width: 100%;
 
             img{
-                width: 100% ;
+                width: 100%;
+                border-radius: 0.5rem;
             }
+        }
+        .bottom{
+            width: 100%;
+            background-color: aqua;
+            
         }
     }        
 }
