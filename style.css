@@ -42,10 +42,11 @@ main section .bottom {
   gap: 1rem;
   background-color: rgb(52, 51, 51);
   padding: 1rem;
+  border-radius: 10px;
 }
 main section .bottom h2 {
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 main section .bottom .text {
   display: flex;
@@ -55,18 +56,42 @@ main section .bottom .text {
 main section .bottom .text h3 {
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-size: 1.8rem;
+  font-weight: 100;
+}
+main section .bottom .text p {
+  opacity: 0.3;
+  font-size: 0.8rem;
 }
 main section .bottom .text button {
   width: -moz-fit-content;
   width: fit-content;
   background-color: rgba(42, 41, 41, 0.63);
   backdrop-filter: blur(0px);
-  border: none;
+  border: 1px solid white;
   padding: 0.4rem;
   border-radius: 50%;
 }
+main section .bottom .text button i {
+  color: white;
+}
+
 @media (min-width: 700px) {
-  main main section {
+  main section {
+    display: flex;
     flex-direction: row;
+  }
+  main section .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main section .bottom .text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  main section .top, main section .bottom {
+    width: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
