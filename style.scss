@@ -1,131 +1,82 @@
-@mixin flex{
-        display: flex;
-        flex-direction: column;
+@font-face {
+    font-family: satoshi;
+    src: url(./Satoshi-Light.woff);
 }
 @font-face {
-    font-family: helvetica1;
-    src: url(./HelveticaNeueLight.otf);
+    font-family: alvy;
+    src: url(./alvy.woff2);
+}
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
 }
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: helvetica1;
-}
-html,body{
-    width: 100%;
-    height: 100%;
+    font-family: satoshi;
 }
 body{
-    background-color: black;
+        background-color: black;
 }
 main{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    color: white;
-     section{
-    max-width: 2000px;
-    align-items: center;
-}
+    height: 100%;
 
-    section.view1{
-        display: flex;
-        flex-direction: column;
+
+    section{
         width: 100%;
         padding: 1rem;
+        @include flex-column;
         gap: 1rem;
 
         .top{
             width: 100%;
-            object-fit: cover;
+
             img{
                 width: 100%;
-                border-radius: 0.5rem;
-               
+                border-radius: 10px;
             }
         }
         .bottom{
-            width: 100%;
-            background-color: rgba(33, 35, 35, 0.841);
-            @include flex;
+            color: white;
+            @include flex-column;
+            gap: 1rem;
+            background-color: rgb(52, 51, 51);
             padding: 1rem;
-            border-radius: 0.5rem;
-            gap:3rem;
-            justify-content: space-between;
-            p{
+
+            h2{
+                text-transform: uppercase;
                 font-size: 1rem;
-                text-transform: uppercase;
-                font-weight: 600;
-            }
-            
-            .text{
-              @include flex;
-                gap: 1rem;
-
-               h5{
-                font-size: 2rem;
-                font-weight: 200;
-                text-transform: uppercase;
-               }
-            p{
-                font-size: 1rem;
-                font-weight: 300;
-                line-height: 1.6;
-                opacity: 0.3;
-         }
-           button{
-                width: fit-content;
-                border-radius: 10px;
-                padding: 0.5rem;
-                text-transform: uppercase;
-                font-size: 0.7rem;
-                font-weight: 500;
-
-            }
-    }
-           
-          
- }
-
-    
-}
-    
-}
-  @media (min-width:700px){
-        main{
-            
-            section.view1{
-                flex-direction: row;
-                .top{
-
-                    img{
-                        object-fit: cover;
-                    }
-                }
-
-                .top,.bottom{
-                    width: 50%;
-                }
-                .bottom{
-                    @include flex();
                
+            }
 
-                    .text{
-                       @include flex;                           
-                        
-                         h5{
-                        font-size: 4rem;
-                        font-weight: 100;
-                        line-height: 1;
-                    }
-                    p{
-                        font-size: 1.25rem;
+            .text{
+                @include flex-column;
+                gap: 1rem;
+                
+                h3{
+                    text-transform: uppercase;
+                     letter-spacing: 1px;
 
-                    }
-                    }
-                   
+                }
+                button{
+                    width: fit-content;
+                    background-color: rgba(42, 41, 41, 0.63);
+                    backdrop-filter: blur(0px);
+                    border: none;
+                    padding: 0.4rem;
+                    border-radius: 50%;
                 }
             }
         }
-    }    
+    }
+ @media (min-width:700px){
+        main{
+
+            section{
+                flex-direction: row;
+            }
+        }
+    }
+}
