@@ -1,7 +1,6 @@
 @mixin flex{
-            display: flex;
+        display: flex;
         flex-direction: column;
-        font-family: helvetica;
 }
 @font-face {
     font-family: helvetica1;
@@ -25,6 +24,10 @@ main{
     display: flex;
     flex-direction: column;
     color: white;
+     section{
+    max-width: 2000px;
+    align-items: center;
+}
 
     section.view1{
         display: flex;
@@ -35,43 +38,94 @@ main{
 
         .top{
             width: 100%;
-
+            object-fit: cover;
             img{
                 width: 100%;
                 border-radius: 0.5rem;
+               
             }
         }
         .bottom{
             width: 100%;
             background-color: rgba(33, 35, 35, 0.841);
-            display: flex;
-            flex-direction: column;
+            @include flex;
             padding: 1rem;
+            border-radius: 0.5rem;
+            gap:3rem;
             justify-content: space-between;
-            gap: 1.3rem;
-            h3{
-                font-size: 1.5rem;
+            p{
+                font-size: 1rem;
                 text-transform: uppercase;
+                font-weight: 600;
             }
-            h5{
+            
+            .text{
+              @include flex;
+                gap: 1rem;
+
+               h5{
                 font-size: 2rem;
                 font-weight: 200;
                 text-transform: uppercase;
-                line-height: 2.5rem;
-            }
+               }
             p{
-                font-weight: 200;
-                text-transform: capitalize;
-                line-height: 1.4;
+                font-size: 1rem;
+                font-weight: 300;
+                line-height: 1.6;
                 opacity: 0.3;
-
-            }
-            button{
+         }
+           button{
                 width: fit-content;
                 border-radius: 10px;
-                padding: 0.2rem;
+                padding: 0.5rem;
+                text-transform: uppercase;
+                font-size: 0.7rem;
+                font-weight: 500;
 
             }
-        }
-    }        
+    }
+           
+          
+ }
+
+    
 }
+    
+}
+  @media (min-width:700px){
+        main{
+            
+            section.view1{
+                flex-direction: row;
+                .top{
+
+                    img{
+                        object-fit: cover;
+                    }
+                }
+
+                .top,.bottom{
+                    width: 50%;
+                }
+                .bottom{
+                    @include flex();
+               
+
+                    .text{
+                       @include flex;                           
+                        
+                         h5{
+                        font-size: 4rem;
+                        font-weight: 100;
+                        line-height: 1;
+                    }
+                    p{
+                        font-size: 1.25rem;
+
+                    }
+                    }
+                   
+                }
+            }
+        }
+    }    
