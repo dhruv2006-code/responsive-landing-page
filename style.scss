@@ -4,13 +4,14 @@
         font-family: helvetica;
 }
 @font-face {
-    font-family: helvetica;
+    font-family: helvetica1;
     src: url(./HelveticaNeueLight.otf);
 }
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: helvetica1;
 }
 html,body{
     width: 100%;
@@ -30,6 +31,7 @@ main{
         flex-direction: column;
         width: 100%;
         padding: 1rem;
+        gap: 1rem;
 
         .top{
             width: 100%;
@@ -41,8 +43,35 @@ main{
         }
         .bottom{
             width: 100%;
-            background-color: aqua;
-            
+            background-color: rgba(33, 35, 35, 0.841);
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            justify-content: space-between;
+            gap: 1.3rem;
+            h3{
+                font-size: 1.5rem;
+                text-transform: uppercase;
+            }
+            h5{
+                font-size: 2rem;
+                font-weight: 200;
+                text-transform: uppercase;
+                line-height: 2.5rem;
+            }
+            p{
+                font-weight: 200;
+                text-transform: capitalize;
+                line-height: 1.4;
+                opacity: 0.3;
+
+            }
+            button{
+                width: fit-content;
+                border-radius: 10px;
+                padding: 0.2rem;
+
+            }
         }
     }        
 }
