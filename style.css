@@ -21,6 +21,7 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
+  color: white;
 }
 main section.view1 {
   display: flex;
