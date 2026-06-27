@@ -10,6 +10,10 @@
     display: flex;
     flex-direction: column;
 }
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
 *{
     padding: 0;
     margin: 0;
@@ -85,38 +89,31 @@ main{
             }
         }
     }
-   section.view2{
-    display: flex;
-    flex-direction: row;
-    gap: 2.5rem;
-    padding: 1rem;
-    color:white;
-    width: 100%;
-    justify-content: space-evenly;
-
-    .top,.bottom{
-        width: 100%;
-   display: flex;
-   flex-direction: row;
-  
-        .element{
-            justify-content: space-between;
-            width: 100%;
+    section.view2{
+        @include flex-row;
+        justify-content: space-evenly;
+        gap: 1rem;
+        padding: 1rem;
+        .top,.bottom{
+            @include flex-column;
             text-align: center;
-            line-height: 1.5;
-            text-transform: uppercase;
-
-            small{
-                font-size: 1rem;
-                opacity: 0.5;
+            gap: 1.5rem;
+            .element{
+                @include flex-column;
+                gap: 0.6rem;
             }
-            p{
-                font-size: 2.5rem;
+                h5{
+                    opacity: 0.5;
+                    font-size: 1.6rem;  
+                    text-transform: uppercase;
+                }
+                h2{
+                    font-size: 3rem;
+                }
             }
         }
-    }
-   }
-}
+     }
+    
 @media (min-width:900px) {
     main{
 
@@ -138,14 +135,15 @@ main{
 
             
         }
-        section.view2{
-            display: flex;
-            flex-direction: row;
-         .top,.bottom{
-               display: flex;
-                flex-direction: row;
-         }
+       section.view2{
+        width: 100%;
+        .top,.bottom{
+            @include flex-row;
+            width: 100%;
+            justify-content: space-evenly;
+         
         }
+       }
         }
 
-    }
+}
