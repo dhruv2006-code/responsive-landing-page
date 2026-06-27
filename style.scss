@@ -58,7 +58,7 @@ main{
             
             gap: 1rem;
             background-color: rgba(46, 45, 45, 0.508);
-            padding: 1rem;
+            padding: 2rem;
             border-radius: 10px;
 
             h2{
@@ -123,7 +123,137 @@ main{
                 }
             }
         }
+    
+     section.view3{
+        padding: 1rem;
+        @include flex-column;
+        gap: 1rem;
+
+        img{
+             border-radius: 10px;
+               width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        }
+        .bottom{
+               gap: 3rem;
+            background-color: rgba(46, 45, 45, 0.508);
+            padding: 2rem;
+            border-radius: 10px;
+            @include flex-column;
+            justify-content: space-between;
+         
+            h2{
+                text-transform: uppercase;
+                font-size: 1.4rem;
+               
+            }
+
+            .text{
+                @include flex-column;
+                width: 100%;
+            gap: 2rem;
+         
+                
+                h3{
+                    text-transform: uppercase;
+                     letter-spacing: 1px;
+                     font-size: 2rem;
+                     font-weight: 300;
+                     
+
+                }
+                p{
+                    opacity: 0.3;
+                    font-size: 1.5rem;
+                    width: 100%;
+                }
+            }
      }
+   }
+     section.view4{
+        padding: 1rem;
+        @include flex-column;
+        gap: 1rem;
+
+        img{
+             border-radius: 10px;
+               width: 100%;
+        object-fit: cover;
+        }
+        .bottom{
+               gap: 3rem;
+            background-color: rgba(46, 45, 45, 0.508);
+            padding: 2rem;
+            border-radius: 10px;
+            @include flex-column;
+            justify-content: space-between;
+         
+            h2{
+                text-transform: uppercase;
+                font-size: 1.4rem;
+               
+            }
+
+            .text{
+                @include flex-column;
+                width: 100%;
+            gap: 2rem;
+         
+                
+                h3{
+                    text-transform: uppercase;
+                     letter-spacing: 1px;
+                     font-size: 2rem;
+                     font-weight: 300;
+                     
+
+                }
+                p{
+                    opacity: 0.3;
+                    font-size: 1.5rem;
+                    width: 100%;
+                }
+     }
+    }
+}
+    section.view5{
+        @include flex-row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1rem;
+        font-family: satoshi;
+
+        .left{
+            @include flex-row;
+               justify-content: space-between;
+               gap: 1rem;
+            button:hover{
+                transform: translateY(-10px);
+                   transition: 1s ease-in-out;
+                   box-shadow: 1px 1px 10px #fff;
+                   border: 1px solid white;
+            }
+               button{
+                border-radius: 50%;
+                background-color: rgba(71, 70, 70, 0.516);
+                border: none;
+             
+               }
+                 
+            h1{
+               text-transform: uppercase;
+            }
+            i{
+                padding: 1rem 0.6rem;
+                font-size: 1.5rem;
+                color: white;
+               
+            }
+        }
+}
+ }
+
 @media (min-width:900px) {
     main{
 
@@ -160,6 +290,48 @@ main{
          
         }
        }
+       section.view3{
+        @include flex-row;
+        flex-direction: row-reverse;
+
+        .top,.bottom{
+            width: 50%;
         }
+        .bottom{
+            .text{
+            h3{
+                font-size: 4rem;
+            }
+            p{
+                width: 80%;
+                
+         
+           }
+           }
+        }
+
+     }
+        section.view4{
+        @include flex-row;
+        flex-direction: row;
+
+        .top,.bottom{
+            width: 50%;
+        }
+        .bottom{
+            .text{
+            h3{
+                font-size: 3.6rem;
+            }
+            p{
+                width: 80%;
+                
+         
+           }
+           }
+        }
+
+     }
+ }
 
 }
