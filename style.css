@@ -235,16 +235,79 @@ main section.view5 .left i {
   font-size: 1.5rem;
   color: white;
 }
-main section.view6 {
+
+section.view6 {
   width: 100%;
   padding: 1rem;
 }
-main section.view6 i {
-  font-size: 1.5rem;
-  background: rgba(255, 255, 255, 0.2);
+section.view6 .card {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+section.view6 .card .image1 {
+  background-image: url("https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbd7d003dfb6a1bdecb_team-01.webp");
+  aspect-ratio: 1/1;
+  background-size: cover;
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section.view6 .card .image1 .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+section.view6 .card .image1 .icons i {
+  background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-  padding: 0.8rem;
+  font-size: 1.4rem;
+  padding: 1rem;
   border-radius: 50%;
+}
+section.view6 .card .text {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+section.view6 .card .image2 {
+  background-image: url("https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbd2e12fa747e999689_team-02.webp");
+  aspect-ratio: 1/1;
+  background-size: cover;
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section.view6 .card .image2 .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+section.view6 .card .image2 .icons i {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  font-size: 1.4rem;
+  padding: 1rem;
+  border-radius: 50%;
+}
+section.view6 .card .text {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 @media (min-width: 900px) {
