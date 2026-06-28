@@ -252,6 +252,19 @@ main{
             }
         }
 }
+    section.view6{
+        width: 100%;
+        padding: 1rem;
+        i{
+            font-size: 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem;
+            border-radius: 50%;
+            
+        }
+    
+}
  }
 
 @media (min-width:900px) {
